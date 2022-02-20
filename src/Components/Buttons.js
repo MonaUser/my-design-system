@@ -126,13 +126,13 @@ ${applyStyleModifiers(BUTTON_MODIFIERS)};
 
 export const SecondaryButton = styled(Button)`
 background-color:white;
-border: 2px  solid ${props=>defaultTheme.PrimaryColor} ;
-color:${props=>defaultTheme.PrimaryColor};
+border: 2px  solid ${defaultTheme.PrimaryColor} ;
+color:${defaultTheme.PrimaryColor};
 
 &:disabled{
     background:none;
-        color: ${props=>defaultTheme.disabled};
-        border-color:${props=>defaultTheme.disabled};
+        color: ${defaultTheme.disabled};
+        border-color:${defaultTheme.disabled};
         cursor: not-allowed;
 
 }
