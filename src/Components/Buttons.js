@@ -23,11 +23,16 @@ color:${defaultTheme.TextColorInverted};
 &:hover{
     background-color:${defaultTheme.status.warningColorHover};
 }
+&:focus{
+    background-color:${defaultTheme.status.warningColorHover};
 
+    outline: 3px solid ${defaultTheme.status.warningColorHover};
+    outline-offset: 2px;
+}
 
 `
 ,
-secondaryWarning: ()=>`
+secondaryWarning: ({props})=>`
 background: none;
 color:${defaultTheme.status.warningColor};
 border:2px solid ${defaultTheme.status.warningColor};
@@ -35,7 +40,7 @@ border:2px solid ${defaultTheme.status.warningColor};
 
 `,
 
-error:()=>`
+error:({props})=>`
 
 background-color:${defaultTheme.status.errorColor};
 color:${defaultTheme.TextColorInverted};
@@ -95,7 +100,9 @@ color: ${defaultTheme.TextColorOnPrimary};
 &:focus{
    outline 3px solid  ${defaultTheme.PrimaryColorFocus};
    outline-offset: 2px;
-    color: ${defaultTheme.TextColorOnPrimary};
+    color: ${defaultTheme.TextColorInverted};
+    background-color:${defaultTheme.PrimaryColorHover};
+
     
     }
 
