@@ -12,6 +12,8 @@ export const defaultTheme = {
     TextColorInverted: neutral[100],
     disabled: neutral[400],
     textOnDisabled: neutral[500],
+    formElementBackground: neutral[100],
+    textOnFormElementBackground:neutral[600],
     PrimaryFont,
     status: {
         warningColor: yellow[100],
@@ -32,13 +34,15 @@ export const defaultTheme = {
 
       PrimaryColor: neutral[100],
       PrimaryColorFocus: neutral[200],
-      PrimaryColorHover: neutral[100],
+      PrimaryColorHover: neutral[300],
       PrimaryColorActive: blue[300],
       TextColorOnPrimary: blue[300],
       TextColor: neutral[600],
       TextColorInverted: neutral[100],
       disabled: neutral[400],
       textOnDisabled: neutral[300],
+      formElementBackground: blue[100],
+      textOnFormElementBackground:neutral[100],
       PrimaryFont,
       status: {
           warningColor: yellow[100],

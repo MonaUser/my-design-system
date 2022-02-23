@@ -1,8 +1,7 @@
 import React,{useState} from "react";
 import ReactDom from "react-dom";
 import { ThemeProvider } from "styled-components";
-import PrimaryButton,
-{ SecondaryButton, TertiaryButton } from "./Components/Buttons";
+import { SignUpModal } from "./Components";
 import { GlobalStyle,defaultTheme,darkTheme } from "./Utils";
 
 
@@ -27,13 +26,10 @@ const App = () => {
 
             <div style={{backgroundColor:useDarkTheme?defaultTheme.PrimaryColor:darkTheme.PrimaryColor,
             width:"100vw", height:"100vh", display:"flex",alignItems:"center",justifyContent:"space-around"}}>
-            <PrimaryButton  modifiers={["small","warning"]} >Hello World!</PrimaryButton>
-            <SecondaryButton  >Secondary !</SecondaryButton>
-            <TertiaryButton  >Tertiary Button!</TertiaryButton>
+            <SignUpModal/>
+            <GlobalStyle />
 
             </div>
-            
-            <GlobalStyle />
         </ThemeProvider >
 
     );
