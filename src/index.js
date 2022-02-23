@@ -9,6 +9,7 @@ const App = () => {
 
 
     const[useDarkTheme, setDarkTheme]=useState(false);
+    const [showModal, setShowModal]=useState(false);
     return (
         <ThemeProvider theme={useDarkTheme?darkTheme:defaultTheme}>
 
@@ -24,9 +25,15 @@ const App = () => {
             > Default Theme
             </button>
 
+            <button
+             style={{ margin:"0 16px 24px ",padding:"8px", background:"none", cursor: "pointer"}}
+             onClick={()=>{setShowModal(!showModal)}}
+            > Modal
+            </button>
+
             <div style={{backgroundColor:useDarkTheme?defaultTheme.PrimaryColor:darkTheme.PrimaryColor,
             width:"100vw", height:"100vh", display:"flex",alignItems:"center",justifyContent:"space-around"}}>
-            <SignUpModal/>
+            <SignUpModal showModal={showModal} setShowModal={setShowModal}/>
             <GlobalStyle />
 
             </div>
